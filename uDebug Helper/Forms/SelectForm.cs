@@ -11,6 +11,7 @@ namespace uDebug_Helper.Forms
     {
         private Problem problem;
         private string answer;
+        private bool inputIsSelected = false;
 
         public SelectForm()
         {
@@ -21,6 +22,7 @@ namespace uDebug_Helper.Forms
         {
             listView1.Clear();
             textBox1.Text = "Select a input...";
+            inputIsSelected = false;
 
             Client client = new Client();
             int problemNumber = Convert.ToInt32(
@@ -43,11 +45,18 @@ namespace uDebug_Helper.Forms
                 string inputs = problem.GetInput(problem.Inputs[e.ItemIndex]).Replace("\n", Environment.NewLine);
                 textBox1.Text = inputs;
                 answer = problem.GetOutput(problem.Inputs[e.ItemIndex]);
+                inputIsSelected = true;
             }
         }
 
         private void btn_compare_Click(object sender, EventArgs e)
         {
+            if (!inputIsSelected)
+            {
+                MessageBox.Show("Input is null");
+                return;
+            }
+
             DataLoader.SaveToAppData("input.txt", textBox1.Text);
             DataLoader.SaveToAppData("answer.txt", answer);
             if (DataLoader.LoadFromAppData("compiler_path.settings") == null)
