@@ -62,6 +62,7 @@ namespace uDebug_Helper.Forms
             this.richTextBox1.Size = new System.Drawing.Size(460, 547);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.WordWrap = false;
             // 
             // richTextBox2
             // 
@@ -74,6 +75,7 @@ namespace uDebug_Helper.Forms
             this.richTextBox2.Size = new System.Drawing.Size(460, 547);
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = "";
+            this.richTextBox2.WordWrap = false;
             // 
             // CompareForm
             // 
