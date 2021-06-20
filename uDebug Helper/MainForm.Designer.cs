@@ -29,6 +29,7 @@ namespace uDebug_Helper
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_settings = new System.Windows.Forms.Button();
             this.btn_compare = new System.Windows.Forms.Button();
@@ -139,6 +140,7 @@ namespace uDebug_Helper
             this.ClientSize = new System.Drawing.Size(1632, 803);
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1200, 600);
             this.Name = "MainForm";
             this.Text = "uDebug Helper";
