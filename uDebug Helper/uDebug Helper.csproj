@@ -230,7 +230,6 @@
     <Compile Include="Forms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TextRange.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
